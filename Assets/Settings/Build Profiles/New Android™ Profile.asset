@@ -165,12 +165,12 @@ MonoBehaviour:
     - line: '|   tvOSBundleVersion: 1.0'
     - line: '|   bundleVersion: 1.0.2'
     - line: '|   preloadedAssets:'
+    - line: '|   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
+        type: 3}'
     - line: '|   - {fileID: 2287240008662139587, guid: f35604945affec84f8799a1ecf4ff05a,
         type: 2}'
     - line: '|   - {fileID: 11400000, guid: 6fe2eb71964b2f446b9732f4f2f8671e, type:
         2}'
-    - line: '|   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
-        type: 3}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   m_HolographicPauseOnTrackingLoss: 1'
