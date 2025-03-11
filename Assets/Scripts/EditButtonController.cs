@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnterButtonController : MonoBehaviour
+public class EditButtonController : MonoBehaviour
 {
     public bool Active = false;
     public GameObject Menu;
