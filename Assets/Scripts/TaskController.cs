@@ -43,6 +43,7 @@ public class TaskController : MonoBehaviour
     void TaskActive()
     {
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(true);
+        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Task");
     }
     void lastTaskSave()
     {
