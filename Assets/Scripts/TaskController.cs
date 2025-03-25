@@ -22,8 +22,8 @@ public class TaskController : MonoBehaviour
 
     public void ButtonClicked()
     {
+        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Close");
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(false);
-
         GetTask();
 
         while (randomChild == lastTask[0] & randomRandomChild == lastTask[1])

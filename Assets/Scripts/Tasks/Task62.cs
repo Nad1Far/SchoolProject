@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Task61 : MonoBehaviour
+public class Task62 : MonoBehaviour
 {
     public GameObject Chisl1;
     public GameObject Chisl2;
@@ -14,7 +14,7 @@ public class Task61 : MonoBehaviour
     private string[] VarZnam1 = new string[20]  { "1", "2", "1", "3", "5", "4", "3", "6", "7", "7", "2", "5", "1", "5", "8", "9", "10", "9", "1", "1" };
 
 
-    private string[] VarChisl2 = new string[20] { "4", "8", "6", "9", "12", "10", "11", "15", "16", "17", "8", "18", "3", "14", "19", "18", "20", "17", "2", "3" };
+    private string[] VarChisl2 = new string[20] { "4", "8", "6", "9", "16", "10", "11", "15", "16", "17", "8", "18", "3", "14", "19", "18", "20", "17", "2", "3" };
     private string[] VarZnam2 = new string[20]  { "2", "4", "3", "6", "8", "5", "7", "10", "12", "13", "4", "9", "2", "7", "10", "11", "12", "8", "1", "1" };
 
 
