@@ -22,7 +22,15 @@ public class Task91 : MonoBehaviour
 
     void Task()
     {
-        Order = Random.Range(0, 20);
+        Order = Random.Range(0, 10);
+
+
+        Debug.Log(VarChisl1[Order]);
+        Debug.Log(VarZnam1[Order]);
+        Debug.Log(VarChisl2[Order]);
+        Debug.Log(VarZnam2[Order]);
+
+
         Chisl1.transform.GetComponent<TMP_Text>().text = VarChisl1[Order];
         Znam1.transform.GetComponent<TMP_Text>().text = VarZnam1[Order];
         RightChislo.transform.GetComponent<TMP_Text>().text = VarChisl2[Order];
