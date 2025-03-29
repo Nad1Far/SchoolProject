@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class TaskController : MonoBehaviour
 {
     public GameObject Tasks;
+    public GameObject Input;
 
     private int randomChild;
     private int randomRandomChild;
@@ -33,6 +34,9 @@ public class TaskController : MonoBehaviour
         TaskActive();
         lastTaskSave();
     }
+    
+
+
 
     void GetTask()
     {
