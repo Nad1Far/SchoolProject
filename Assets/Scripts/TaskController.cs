@@ -7,17 +7,17 @@ using UnityEngine.UI;
 public class TaskController : MonoBehaviour
 {
     public GameObject Tasks;
-    public GameObject InputText;
+    [SerializeField]public TMP_Text InputText;
     public Image ColorBox;
 
-    private string MyText;
+    [SerializeField]private string MyText;
 
     private int randomChild;
     private int randomRandomChild;
     private int CountChild;
 
-    private int InputAnswer;
-    public static int TaskAnswer;
+    [SerializeField] private TMP_InputField InputAnswer;
+    public static string TaskAnswer;
 
     private int[] lastTask = new int[2];
 
@@ -59,7 +59,7 @@ public class TaskController : MonoBehaviour
     {
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(true);
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Task");
-        //Debug.Log(TaskAnswer);
+        Debug.Log(TaskAnswer);
     }
 
     void lastTaskSave()
@@ -70,22 +70,12 @@ public class TaskController : MonoBehaviour
 
     public void SaveText()
     {
-        MyText = InputText.transform.GetComponent<TMP_Text>().text;
-        Debug.Log(MyText);
+       MyText = InputAnswer.text;
     }
 
     void Sravn()
     {
-        //Debug.Log(MyText);
-
-        bool result = int.TryParse(MyText, out InputAnswer);
-        Debug.Log(result);
-        
-
-
-        int.TryParse(MyText, out InputAnswer);
-
-        if (TaskAnswer == InputAnswer)
+        if(MyText == TaskAnswer)
         {
             ColorBox.color = Color.green;
         }

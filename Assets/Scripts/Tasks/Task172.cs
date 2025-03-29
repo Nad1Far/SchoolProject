@@ -15,7 +15,7 @@ public class Task172 : MonoBehaviour
     private string[] VarZnam = new string[20] { "2", "3", "4", "2", "3", "4", "4", "4", "2", "3", "3", "2", "3", "4", "3", "4", "5", "5", "2", "2" };
 
 
-    private int[] VarAnswer = new int[20] { 3, 5, 2, 3, 8, 3, 8, 10, 1, 6, 5, 4, 12, 21, 18, 18, 20, 33, 72, 78 };
+    private string[] VarAnswer = new string[20] { "3", "5", "2", "3", "8", "3", "8", "10", "1", "6", "5", "4", "12", "21", "18", "18", "20", "33", "72", "78" };
 
 
     private void Start()

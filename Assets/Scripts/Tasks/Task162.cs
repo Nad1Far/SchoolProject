@@ -14,11 +14,11 @@ public class Task162 : MonoBehaviour
 
 
 
-    private int[] VarAnswer = new int[3] { 1, 2, 1};
+    private string[] VarAnswer = new string[3] { "1", "2", "1"};
 
     void Task()
     {
-        Order = Random.Range(0, 20);
+        Order = Random.Range(0, 3);
         Chislo1.transform.GetComponent<TMP_Text>().text = VarChislo1[Order];
         Chislo2.transform.GetComponent<TMP_Text>().text = VarChislo2[Order];
     }

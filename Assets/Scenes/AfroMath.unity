@@ -863,8 +863,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tasks: {fileID: 307133307}
-  InputText: {fileID: 322774467}
+  InputText: {fileID: 322774469}
   ColorBox: {fileID: 419741672}
+  MyText: 
+  InputAnswer: {fileID: 2062307202}
 --- !u!1 &114728472
 GameObject:
   m_ObjectHideFlags: 0

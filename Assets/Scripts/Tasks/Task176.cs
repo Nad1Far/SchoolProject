@@ -14,7 +14,7 @@ public class Task176 : MonoBehaviour
 
 
 
-    private int[] VarAnswer = new int[19] { 6, 8, 10, 12, 15, 18, 21, 20, 24, 28, 30, 35, 40, 48, 54, 70, 96, 72, 120 };
+    private string[] VarAnswer = new string[19] { "6", "8", "10", "12", "15", "18", "21", "20", "24", "28", "30", "35", "40", "48", "54", "70", "96", "72", "120" };
 
     void Task()
     {
