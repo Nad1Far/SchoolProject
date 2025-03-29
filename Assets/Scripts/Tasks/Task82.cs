@@ -18,7 +18,7 @@ public class Task82 : MonoBehaviour
 
     void Task()
     {
-        Order = Random.Range(0, 20);
+        Order = Random.Range(0, 17);
         Chislo1.transform.GetComponent<TMP_Text>().text = VarChislo1[Order];
         Chislo2.transform.GetComponent<TMP_Text>().text = VarChislo2[Order];
 

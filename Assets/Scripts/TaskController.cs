@@ -10,6 +10,8 @@ public class TaskController : MonoBehaviour
     public GameObject InputText;
     public Image ColorBox;
 
+    private string MyText;
+
     private int randomChild;
     private int randomRandomChild;
     private int CountChild;
@@ -18,7 +20,6 @@ public class TaskController : MonoBehaviour
     public static int TaskAnswer;
 
     private int[] lastTask = new int[2];
-    private bool str;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class TaskController : MonoBehaviour
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(false);
         GetTask();
 
+
         while (randomChild == lastTask[0] & randomRandomChild == lastTask[1])
         {
             GetTask();
@@ -43,6 +45,8 @@ public class TaskController : MonoBehaviour
         lastTaskSave();
     }
     
+
+
 
     void GetTask()
     {
@@ -55,7 +59,7 @@ public class TaskController : MonoBehaviour
     {
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(true);
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Task");
-        Debug.Log(TaskAnswer);
+        //Debug.Log(TaskAnswer);
     }
 
     void lastTaskSave()
@@ -64,17 +68,30 @@ public class TaskController : MonoBehaviour
         lastTask[1] = randomRandomChild;
     }
 
+    public void SaveText()
+    {
+        MyText = InputText.transform.GetComponent<TMP_Text>().text;
+        Debug.Log(MyText);
+    }
+
     void Sravn()
     {
-        int.TryParse(InputText.transform.GetComponent<TMP_Text>().text, out InputAnswer);
+        //Debug.Log(MyText);
 
-        if (TaskAnswer != InputAnswer)
+        bool result = int.TryParse(MyText, out InputAnswer);
+        Debug.Log(result);
+        
+
+
+        int.TryParse(MyText, out InputAnswer);
+
+        if (TaskAnswer == InputAnswer)
         {
-            ColorBox.color = Color.red;
+            ColorBox.color = Color.green;
         }
         else
         {
-            ColorBox.color = Color.green;
+            ColorBox.color = Color.red;
         }
     }
 }

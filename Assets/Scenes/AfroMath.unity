@@ -740,7 +740,6 @@ GameObject:
   - component: {fileID: 88459554}
   - component: {fileID: 88459558}
   - component: {fileID: 88459559}
-  - component: {fileID: 88459560}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -864,21 +863,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tasks: {fileID: 307133307}
-  InputText: {fileID: 0}
-  ColorBox: {fileID: 0}
---- !u!114 &88459560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88459553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6711b8b71ef6cc145b94b3b6ce458ffc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   InputText: {fileID: 322774467}
+  ColorBox: {fileID: 419741672}
 --- !u!1 &114728472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,15 +1859,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
+  m_fontSize: 55.45
   m_fontSizeBase: 14
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -12816,7 +12802,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 88459559}
+        m_TargetAssemblyTypeName: TaskController, Assembly-CSharp
+        m_MethodName: SaveText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
