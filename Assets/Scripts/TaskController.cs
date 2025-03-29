@@ -7,14 +7,11 @@ using UnityEngine.UI;
 public class TaskController : MonoBehaviour
 {
     public GameObject Tasks;
-    [SerializeField]public TMP_Text InputText;
     public Image ColorBox;
 
     [SerializeField]private string MyText;
 
-    private int randomChild;
-    private int randomRandomChild;
-    private int CountChild;
+    private int randomChild, randomRandomChild, CountChild;
 
     [SerializeField] private TMP_InputField InputAnswer;
     public static string TaskAnswer;
@@ -31,6 +28,7 @@ public class TaskController : MonoBehaviour
 
     public void ButtonClicked()
     {
+        InputAnswer.text = "";
         Sravn();
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Close");
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(false);

@@ -863,7 +863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tasks: {fileID: 307133307}
-  InputText: {fileID: 322774469}
   ColorBox: {fileID: 419741672}
   MyText: 
   InputAnswer: {fileID: 2062307202}
@@ -1176,7 +1175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d135a9d13b0499240b60f979be242c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Chisl: {fileID: 0}
+  Chisl: {fileID: 356114118}
   Znam1: {fileID: 1820071310}
   Znam2: {fileID: 1950832174}
   RightChislo: {fileID: 1558103287}
