@@ -10,15 +10,15 @@ public class Task91 : MonoBehaviour
 
     private int Order;
 
-    private string[] VarChisl1 = new string[10] {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"};
-    private string[] VarZnam1 = new string[10] { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
+    private string[] VarChisl1 = new string[10] {"6", "8", "12", "10", "15", "20", "4", "3", "1", "5"};
+    private string[] VarZnam1 = new string[10] { "2", "2", "3", "4", "5", "7", "2", "2", "2", "2" };
+    private string[] VarZnam2 = new string[10] { "3", "4", "4", "5", "6", "8", "3", "4", "3", "3" };
+
+    private string[] VarChisl2 = new string[10] { "3", "1", "2", "1", "2", "3", "1", "1", "0", "1" };
 
 
-    private string[] VarChisl2 = new string[10] { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
-    private string[] VarZnam2 = new string[10] { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
 
-
-    private string[] VarAnswer = new string[10] { "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" };
+    private string[] VarAnswer = new string[10] { "36", "20", "72", "70", "150", "328", "18", "10", "3", "21" };
 
     void Task()
     {
