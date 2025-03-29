@@ -14,7 +14,7 @@ public class Task162 : MonoBehaviour
 
 
 
-    private string[] VarAnswer = new string[3] { "1", "2", "1"};
+    private int[] VarAnswer = new int[3] { 1, 2, 1};
 
     void Task()
     {

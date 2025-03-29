@@ -18,7 +18,7 @@ public class Task62 : MonoBehaviour
     private string[] VarZnam2 = new string[20]  { "2", "4", "3", "6", "8", "5", "7", "10", "12", "13", "4", "9", "2", "7", "10", "11", "12", "8", "1", "1" };
 
 
-    private string[] VarAnswer = new string[20] { "5", "5", "4", "4", "4", "3", "3", "3", "3", "2", "4", "4", "5", "3", "2", "2", "2", "2", "5", "5" };
+    private int[] VarAnswer = new int[20] { 5, 5, 4, 4, 4, 3, 3, 3, 3, 2, 4, 4, 5, 3, 2, 2, 2, 2, 5, 5};
 
     void Task()
     {
@@ -27,6 +27,8 @@ public class Task62 : MonoBehaviour
         Znam1.transform.GetComponent<TMP_Text>().text = VarZnam1[Order];
         Chisl2.transform.GetComponent<TMP_Text>().text = VarChisl2[Order];
         Znam2.transform.GetComponent<TMP_Text>().text = VarZnam2[Order];
+
+        TaskController.TaskAnswer = VarAnswer[Order];
     }
 
     void Close()
