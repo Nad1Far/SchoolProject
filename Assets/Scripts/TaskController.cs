@@ -76,7 +76,6 @@ public class TaskController : MonoBehaviour
         if(MyText == TaskAnswer)
         {
             ColorBox.color = Color.green;
-            Application.Quit();
         }
         else
         {
