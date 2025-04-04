@@ -27,7 +27,7 @@ public class Task91 : MonoBehaviour
         Znam2.transform.GetComponent<TMP_Text>().text = VarZnam2[Order];
         RightChislo.transform.GetComponent<TMP_Text>().text = VarRightChislo[Order];
 
-        Debug.Log(Order);
+        //Debug.Log(Order);
         TaskController.TaskAnswer = VarAnswer[Order];
     }
 

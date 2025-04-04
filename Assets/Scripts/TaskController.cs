@@ -9,6 +9,10 @@ public class TaskController : MonoBehaviour
     public GameObject Tasks;
     public Image ColorBox;
 
+
+    public int Test;
+
+
     [SerializeField]private string MyText;
 
     private int randomChild, randomRandomChild, CountChild;
@@ -48,7 +52,7 @@ public class TaskController : MonoBehaviour
 
     void GetTask()
     {
-        randomChild = Random.Range(0, CountChild);
+        randomChild = Random.Range(0, CountChild); //randomChild = (Test);
         int CountChildOfChild = Tasks.transform.GetChild(randomChild).transform.childCount;
         randomRandomChild = Random.Range(0, CountChildOfChild);
     }
@@ -57,7 +61,7 @@ public class TaskController : MonoBehaviour
     {
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(true);
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Task");
-        Debug.Log(TaskAnswer);
+        //Debug.Log(TaskAnswer);
     }
 
     void lastTaskSave()
@@ -73,9 +77,22 @@ public class TaskController : MonoBehaviour
 
     void Sravn()
     {
+        if (TaskAnswer == "")
+        {
+            Debug.Log(randomChild);
+            Debug.Log(randomRandomChild);
+            Application.Quit();
+        }
+
+
+
+
+
+
         if(MyText == TaskAnswer)
         {
             ColorBox.color = Color.green;
+            Application.Quit();
         }
         else
         {
