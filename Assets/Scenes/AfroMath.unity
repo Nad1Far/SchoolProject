@@ -602,7 +602,6 @@ GameObject:
   - component: {fileID: 88459556}
   - component: {fileID: 88459555}
   - component: {fileID: 88459554}
-  - component: {fileID: 88459558}
   - component: {fileID: 88459559}
   m_Layer: 5
   m_Name: Canvas
@@ -698,21 +697,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &88459558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88459553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24191c9ea470a4142a31ec043dceff46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Active: 0
-  Menu: {fileID: 804543216}
-  InfoPage: {fileID: 0}
 --- !u!114 &88459559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,7 +711,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tasks: {fileID: 307133307}
   ColorBox: {fileID: 419741672}
-  Test: 4
   MyText: 
   InputAnswer: {fileID: 2062307202}
 --- !u!1 &114728472
@@ -5736,15 +5719,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10553,7 +10536,7 @@ GameObject:
   - component: {fileID: 2062307203}
   - component: {fileID: 2062307202}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
