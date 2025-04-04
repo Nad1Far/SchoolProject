@@ -67,12 +67,10 @@ public class TaskController : MonoBehaviour
         lastTask[0] = randomChild;
         lastTask[1] = randomRandomChild;
     }
-
     public void SaveText()
     {
        MyText = InputAnswer.text;
     }
-
     void Sravn()
     {
         if(MyText == TaskAnswer)
