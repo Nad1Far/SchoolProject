@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.Multiplayer.Center.Common;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,8 +31,7 @@ public class TaskController : MonoBehaviour
     {
         InputAnswer.text = "";
         Sravn();
-        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Close");
-        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(false);
+        Close();
         GetTask();
 
 
@@ -59,7 +57,11 @@ public class TaskController : MonoBehaviour
         Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Task");
         //Debug.Log(TaskAnswer);
     }
-
+    void Close()
+    {
+        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Close");
+        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(false);
+    }
     void lastTaskSave()
     {
         lastTask[0] = randomChild;
