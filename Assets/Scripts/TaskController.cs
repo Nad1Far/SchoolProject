@@ -19,6 +19,7 @@ public class TaskController : MonoBehaviour
 
     private int[] lastTask = new int[2];
 
+
     private void Start()
     {
         CountChild = Tasks.transform.childCount;

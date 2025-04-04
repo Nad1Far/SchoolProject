@@ -13,6 +13,7 @@ public class Task91 : MonoBehaviour
         VarRightChislo = new string[10] { "3", "1", "2", "1", "2", "3", "1", "1", "0", "1" },
         VarAnswer = new string[10] { "36", "20", "72", "70", "150", "328", "18", "10", "3", "21" };
 
+
     void Task()
     {
         Order = Random.Range(0, 10);

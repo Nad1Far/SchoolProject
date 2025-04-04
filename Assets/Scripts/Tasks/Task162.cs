@@ -11,6 +11,7 @@ public class Task162 : MonoBehaviour
         VarChislo2 = new string[3] { "4", "8", "12"},
         VarAnswer = new string[3] { "1", "2", "1"};
 
+
     void Task()
     {
         Order = Random.Range(0, 3);

@@ -13,10 +13,6 @@ public class Task172 : MonoBehaviour
         VarAnswer = new string[20] { "3", "5", "2", "3", "8", "3", "8", "10", "1", "6", "5", "4", "12", "21", "18", "18", "20", "33", "72", "78" };
 
 
-    private void Start()
-    {
-        
-    }
     void Task()
     {
         Order = Random.Range(0, 20);
