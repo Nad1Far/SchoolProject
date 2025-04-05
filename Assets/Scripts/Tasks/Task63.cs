@@ -20,7 +20,7 @@ public class Task63 : MonoBehaviour
         Znam1.transform.GetComponent<TMP_Text>().text = VarZnam1[Order];
         Chisl2.transform.GetComponent<TMP_Text>().text = VarChisl2[Order];
 
-        TaskController.TaskAnswer = VarAnswer[Order];
+        Check.TaskAnswer = VarAnswer[Order];
     }
 
     void Close()

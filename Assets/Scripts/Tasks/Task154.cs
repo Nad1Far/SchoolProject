@@ -16,7 +16,7 @@ public class Task154 : MonoBehaviour
         Order = Random.Range(0, 20);
         Chislo.transform.GetComponent<TMP_Text>().text = VarChislo[Order];
 
-        TaskController.TaskAnswer = VarAnswer[Order];
+        Check.TaskAnswer = VarAnswer[Order];
     }
 
     void Close()

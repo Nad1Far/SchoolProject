@@ -6,13 +6,10 @@ using UnityEngine.UI;
 public class TaskController : MonoBehaviour
 {
     public GameObject Tasks;
-    public Image ColorBox;
 
     private Transform Task;
     //public int Test;
     private int NumTask, NumSubTask, CountTask, CountSubTask, Taskid, SubTaskid;
-
-    public static string TaskAnswer, InputText;
 
 
     private void Start()
@@ -24,7 +21,6 @@ public class TaskController : MonoBehaviour
 
     public void ButtonClicked()
     {
-        Sravn();
         Close();
         GetTask();
         ChangeTask();
@@ -43,7 +39,7 @@ public class TaskController : MonoBehaviour
         Task = Tasks.transform.GetChild(NumTask).transform.GetChild(NumSubTask);
         Task.gameObject.SetActive(true);
         Task.SendMessage("Task");
-        Debug.Log(TaskAnswer);
+        Debug.Log(Check.TaskAnswer);
     }
 
     void Close()
@@ -56,18 +52,6 @@ public class TaskController : MonoBehaviour
     {
         Taskid = NumTask;
         SubTaskid = NumSubTask;
-    }
-
-    void Sravn()
-    {
-        if(InputText == TaskAnswer)
-        {
-            ColorBox.color = Color.green;
-        }
-        else
-        {
-            ColorBox.color = Color.red;
-        }
     }
 
     void ChangeTask()

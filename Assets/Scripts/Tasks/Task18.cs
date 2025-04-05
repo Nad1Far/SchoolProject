@@ -6,7 +6,7 @@ public class Task18 : MonoBehaviour
 
     void Task()
     {
-        TaskController.TaskAnswer = Chislo;
+        Check.TaskAnswer = Chislo;
     }
 
     void Close()

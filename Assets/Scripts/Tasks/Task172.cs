@@ -20,7 +20,7 @@ public class Task172 : MonoBehaviour
         Chislo2.transform.GetComponent<TMP_Text>().text = VarChislo2[Order];
         Znam.transform.GetComponent<TMP_Text>().text = VarZnam[Order];
 
-        TaskController.TaskAnswer = VarAnswer[Order];
+        Check.TaskAnswer = VarAnswer[Order];
 
 
     }

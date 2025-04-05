@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Check : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Image ColorBox;
+    public static string TaskAnswer, InputText;
 
-    // Update is called once per frame
-    void Update()
+    public void Sravn()
     {
-        
+        if (InputText == TaskAnswer)
+        {
+            ColorBox.color = Color.green;
+        }
+        else
+        {
+            ColorBox.color = Color.red;
+        }
     }
 }

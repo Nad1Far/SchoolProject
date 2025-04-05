@@ -13,6 +13,6 @@ public class InputController : MonoBehaviour
     }
     public void SaveText()
     {
-        TaskController.InputText = InputAnswer.text;
+        Check.InputText = InputAnswer.text;
     }
 }
