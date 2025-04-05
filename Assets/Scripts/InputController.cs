@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class InputController : MonoBehaviour
 {

@@ -36,7 +36,7 @@ public class TaskController : MonoBehaviour
         Task = Tasks.transform.GetChild(NumTask).transform.GetChild(NumSubTask);
         Task.gameObject.SetActive(true);
         Task.SendMessage("Task");
-        Debug.Log(Check.TaskAnswer);
+        //Debug.Log(Check.TaskAnswer);
     }
 
     void Close()
