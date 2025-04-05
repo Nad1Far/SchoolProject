@@ -1,7 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public class TaskController : MonoBehaviour
 {
@@ -25,7 +22,7 @@ public class TaskController : MonoBehaviour
         GetTask();
         ChangeTask();
     }
-    
+   
 
     void GetTask()
     {
