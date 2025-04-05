@@ -13,10 +13,6 @@ public class InputController : MonoBehaviour
         InputAnswer.keyboardType = TouchScreenKeyboardType.NumberPad;
     }
 
-    public void ButtonClicked()
-    {
-        InputAnswer.text = "";
-    }
 
     public void Update()
     {
@@ -29,6 +25,12 @@ public class InputController : MonoBehaviour
             Button.gameObject.SetActive(true);
         }
     }
+
+    public void ButtonClicked()
+    {
+        InputAnswer.text = "";
+    }
+
     public void SaveText()
     {
         Check.InputText = InputAnswer.text;
