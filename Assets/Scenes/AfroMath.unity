@@ -603,6 +603,7 @@ GameObject:
   - component: {fileID: 88459555}
   - component: {fileID: 88459554}
   - component: {fileID: 88459559}
+  - component: {fileID: 88459560}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -713,6 +714,18 @@ MonoBehaviour:
   ColorBox: {fileID: 419741672}
   MyText: 
   InputAnswer: {fileID: 2062307202}
+--- !u!114 &88459560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88459553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7631716a5b4ce4ba5e9f0aff33bab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114728472
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,72 +8,59 @@ public class TaskController : MonoBehaviour
     public GameObject Tasks;
     public Image ColorBox;
 
+    private Transform Task;
     //public int Test;
-    private int randomChild, randomRandomChild, CountChild;
+    private int NumTask, NumSubTask, CountTask, CountSubTask, Taskid, SubTaskid;
 
-    [SerializeField]private string MyText;
-    [SerializeField] private TMP_InputField InputAnswer;
-
-    public static string TaskAnswer;
-
-    private int[] lastTask = new int[2];
+    public static string TaskAnswer, InputText;
 
 
     private void Start()
     {
-        CountChild = Tasks.transform.childCount;
+        CountTask = Tasks.transform.childCount;
         GetTask();
-        TaskActive();
-        lastTaskSave();
+        TaskOpen();
     }
 
     public void ButtonClicked()
     {
-        InputAnswer.text = "";
         Sravn();
         Close();
         GetTask();
-
-
-        while (randomChild == lastTask[0] & randomRandomChild == lastTask[1])
-        {
-            GetTask();
-        }
-        TaskActive();
-        lastTaskSave();
+        ChangeTask();
     }
     
 
     void GetTask()
     {
-        randomChild = Random.Range(0, CountChild); //randomChild = (Test);
-        int CountChildOfChild = Tasks.transform.GetChild(randomChild).transform.childCount;
-        randomRandomChild = Random.Range(0, CountChildOfChild);
+        NumTask = Random.Range(0, CountTask); //randomChild = (Test);
+        CountSubTask = Tasks.transform.GetChild(NumTask).transform.childCount;
+        NumSubTask = Random.Range(0, CountSubTask);
     }
 
     void TaskActive()
     {
-        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(true);
-        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Task");
-        //Debug.Log(TaskAnswer);
+        Task = Tasks.transform.GetChild(NumTask).transform.GetChild(NumSubTask);
+        Task.gameObject.SetActive(true);
+        Task.SendMessage("Task");
+        Debug.Log(TaskAnswer);
     }
+
     void Close()
     {
-        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).SendMessage("Close");
-        Tasks.transform.GetChild(randomChild).transform.GetChild(randomRandomChild).gameObject.SetActive(false);
+        Task.SendMessage("Close");
+        Task.gameObject.SetActive(false);
     }
+
     void lastTaskSave()
     {
-        lastTask[0] = randomChild;
-        lastTask[1] = randomRandomChild;
+        Taskid = NumTask;
+        SubTaskid = NumSubTask;
     }
-    public void SaveText()
-    {
-       MyText = InputAnswer.text;
-    }
+
     void Sravn()
     {
-        if(MyText == TaskAnswer)
+        if(InputText == TaskAnswer)
         {
             ColorBox.color = Color.green;
         }
@@ -81,5 +68,20 @@ public class TaskController : MonoBehaviour
         {
             ColorBox.color = Color.red;
         }
+    }
+
+    void ChangeTask()
+    {
+        while (NumTask == Taskid & NumSubTask == SubTaskid)
+        {
+            GetTask();
+        }
+        TaskOpen();
+    }
+    
+    void TaskOpen()
+    {
+        TaskActive();
+        lastTaskSave();
     }
 }
