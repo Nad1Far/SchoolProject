@@ -17,4 +17,9 @@ public class Check : MonoBehaviour
             ColorBox.color = Color.red;
         }
     }
+
+    public void Reset()
+    {
+        ColorBox.color = Color.gray;
+    }
 }
